@@ -1,0 +1,178 @@
+* {
+    margin: 5;
+    padding: 100;
+}
+
+body {
+    background: #3d270cef;
+    font-family: 'Times New Roman', Times, serif
+}
+
+main {
+    justify-items: flex-start;
+    margin: 100px;
+    font-size: large;
+    flex-wrap: wrap;
+    background: linear-gradient(rgb(236, 219, 202),rgba(128, 0, 0, 0.026));
+}
+.home_bar{
+    display: flex;
+    list-style: none;
+    text-align: end;
+    font-size: larger;
+}
+
+.home_item{
+    margin: 0;
+    text-align: right;
+}
+
+.home_item a{
+    text-decoration: none;
+    color:green;
+}
+
+.home_bar:hover{
+    color: #3d270cef;
+}
+
+.home_button{
+    color: red;
+}
+
+/*CREATING A SILDESHOW*/
+* {box-sizing:border-box}
+
+.slideshow_container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+/*.mySlides {
+  display: none;
+}*/
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}*/
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.footer_container{
+    width: 100%;
+}
+
+.footer{
+    color: black;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer_heading h2{
+    margin-bottom: 2rem;
+}
+
+.footer_heading a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.insta_link{
+    padding-left: 5px;
+}
+
+.insta_link:hover{
+    background-color: #385df3ef;
+    color: white;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.youtube_link{
+    padding-left: 5px;
+}
+.youtube_link:hover{
+    background-color: #9b1b1bef;
+    color: white;
+    justify-items: center;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+}

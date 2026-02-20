@@ -1,0 +1,142 @@
+* {
+    margin: 5;
+    padding: 100;
+}
+
+body {
+    background:linear-gradient(white, #3d270cef);
+    font-family: 'Times New Roman', Times, serif
+}
+
+main {
+    justify-items: flex-start;
+    margin: 100px;
+    font-size: large;
+    flex-wrap: wrap;
+    background: linear-gradient(rgb(236, 219, 202),rgba(128, 0, 0, 0.026));
+}
+.home_bar{
+    display: flex;
+    list-style: none;
+    text-align: end;
+    font-size: larger;
+}
+
+.home_item{
+    margin: 0;
+    text-align: right;
+}
+
+.home_item a{
+    text-decoration: none;
+    color:green;
+}
+
+.home_bar:hover{
+    color: #3d270cef;
+}
+
+.home_button{
+    color: red;
+}
+
+.my_photo{
+    width: 200px; /*adjusts the width of the image*/
+    height: auto; /*automatically keeps the same proportions for the image*/
+    object-fit: cover; /*crops an image*/
+    align-items: center;
+}
+
+.navbar{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    display: flex;
+    height: 60px;
+    width: auto;
+    flex-direction: row;
+    margin: 10%;
+    cursor: pointer;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar__item{
+    margin: 0 50px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar__links{
+    color: black;
+}
+
+/*tags*/
+#tech_skills:hover{
+    color: blue
+}
+
+/*footer information and needs*/
+.footer_container{
+    width: 100%;
+}
+
+.footer{
+    color: black;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer_heading h2{
+    margin-bottom: 2rem;
+}
+
+.footer_heading a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.insta_link{
+    padding-left: 5px;
+}
+
+.insta_link:hover{
+    background-color: #385df3ef;
+    color: white;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.youtube_link{
+    padding-left: 5px;
+}
+.youtube_link:hover{
+    background-color: #9b1b1bef;
+    color: white;
+    justify-items: center;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+
+
