@@ -1,9 +1,44 @@
-.App {
-  font: optional;
+:root{
+  --gradient: linear-gradient(
+    135deg,
+    #6d93ff,
+    #3f5fbe,
+    #202656,
+    #6d93ff
+  )
 }
 
-.home_bar{
+.App{
+  min-height: 100vh;
+  background-size: 500% 500%;
+  background-image: var(--gradient);
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home_link{
   list-style: none;
   padding: 0%;
   margin: 0;
+  text-align: right;
+}
+
+.collapsible{
+  flex-direction: row;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.collapsible:hover{
+  background-color: aquamarine;
 }

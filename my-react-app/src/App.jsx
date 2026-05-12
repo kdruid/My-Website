@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css"
 import { useState } from 'react'
 
 function App() {
@@ -13,16 +13,12 @@ function App() {
   return (
     <div className="App">
       <header>
-        <ul className="home_bar">
-            <li className="home_item">
-                <a href="/" className="home_button">Divine's vyne</a>
-            </li>
-        </ul>
+        <a href="/" className="home_link">Divine's vyne</a>
       </header>
       <h1>Welcome!!</h1>
        <main>
         <p>
-          My name is OgheneKaro Egbevurie.
+          My name is Karo.
           I am a Third year Computer Engineering student within the University of Alberta. 
           I am interested in web development, automation, and game development.
           <br />
