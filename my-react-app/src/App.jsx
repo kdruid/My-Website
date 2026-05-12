@@ -74,7 +74,9 @@ function App() {
         )}
 
         {tab =="work" && (
-        <p> I live a student in </p>
+        <p> 
+          <h3> Assisstant Crew Leader</h3>
+        </p>
         )}
 
         {tab =="leadership" && (
