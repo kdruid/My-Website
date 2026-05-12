@@ -6,7 +6,7 @@ function App() {
   const [ShowLead, SetLead] = useState(false)
   const [ShowExp, SetExp] = useState(false)
   const [ShowSkills, SetSkills] = useState(false)
-
+  const [tab, setTab] = useState(null) 
 
 
   return (
@@ -28,28 +28,43 @@ function App() {
           Select which route to take
         </p>
         
-        
-        {ShowProj && (
+        <button onClick={() =>
+          setTab(tab === "projects" ? null : "projects")}  
+          className='collapsible'>Projects</button>         
+        <button onClick={() => 
+          setTab(tab === "work" ? null : "work")}  
+          className='collapsible'>Work Experiecnce</button>
+        <button onClick={() => 
+          setTab(tab === "leadership" ? null : "leadership")}  
+          className='collapsible'>Leadership</button>
+        <button onClick={() => 
+          setTab(tab === "skills" ? null : "skills")}  
+          className='collapsible'>Technical skills</button>        
+          
+        {tab =="projects" && (
         <p> I am a student in </p>
         )}
-        {ShowSkills && (
-        <p> I am a student in </p>
+        {tab =="skills" && (
+        <p> I sleep a student in </p>
         )}
-        {ShowExp && (
-        <p> I am a student in </p>
+        {tab =="work" && (
+        <p> I live a student in </p>
         )}
-        {ShowLead && (
-        <p> I am a student in </p>
+        {tab =="leadership" && (
+        <p> I eat a student in </p>
         )}        
         
-        <button onClick={() => SetProj(!ShowProj)} className='collapsible'>Projects</button>         
 
-        <button onClick={() => SetExp(!ShowExp)} className='collapsible'>Work Experiecnce</button>
 
-        <button onClick={() => SetLead(!ShowLead)} className='collapsible'>Leadership</button>
-
-        <button onClick={() => SetSkills(!ShowSkills)} className='collapsible'>Technical skills</button>
-
+        <div class="footer_container">
+          <div class="footer">
+            <div class="footer_heading foot_1">
+              <h1>Contact Me</h1>
+              <a href="tel:+14374320893">Phone: +1 (437)432-0893</a>
+              <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
+            </div>
+         </div>
+        </div>
        </main>
     </div>
   );
