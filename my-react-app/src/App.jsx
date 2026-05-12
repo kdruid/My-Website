@@ -52,7 +52,6 @@ function App() {
         </p>
         )}
 
-
         {tab =="skills" && (
         <p> 
           <table>
@@ -74,12 +73,16 @@ function App() {
         </p>
         )}
 
-
         {tab =="work" && (
         <p> I live a student in </p>
         )}
+
         {tab =="leadership" && (
-        <p> I eat a student in </p>
+        <p> 
+          <h3> ESS Funding Coordinator </h3>
+          <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
+          <h3> Computer Engineering Senior External Executive </h3>
+        </p>
         )}        
         
         <div class="footer_container">
