@@ -2,12 +2,13 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-  const [ShowProj, SetProj] = useState(false)
-  const [ShowLead, SetLead] = useState(false)
-  const [ShowExp, SetExp] = useState(false)
-  const [ShowSkills, SetSkills] = useState(false)
   const [tab, setTab] = useState(null) 
-
+  const skills = [ 
+    {softSkills: "Leadership", hardSkills: "Python"},
+    {softSkills: "Communication", hardSkills: "CSS"},
+    {softSkills: "Human relations", hardSkills: "Microsoft tools"},
+    {softSkills: "problem solving", hardSkills: "HTML"}
+  ];
 
   return (
     <div className="App">
@@ -40,13 +41,40 @@ function App() {
         <button onClick={() => 
           setTab(tab === "skills" ? null : "skills")}  
           className='collapsible'>Technical skills</button>        
-          
+
         {tab =="projects" && (
-        <p> I am a student in </p>
+        <p> 
+          <h3>Website: </h3> generated this website to display
+          my details. 
+          <h3>Hacksters: </h3> acted as a front-end developer 
+          for an interview bot my team and I created for HackED 2026
+          <img src="" alt="image of our bot" />
+        </p>
         )}
+
+
         {tab =="skills" && (
-        <p> I sleep a student in </p>
+        <p> 
+          <table>
+            <thead>
+              <tr>
+                <th> Soft skills </th>
+                <th> Hard skills </th>
+              </tr>
+            </thead>
+            <tbody>
+              {skills.map((skill, index) => (
+                <tr key={index}>
+                  <td>{skill.softSkills}</td>
+                  <td>{skill.hardSkills}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </p>
         )}
+
+
         {tab =="work" && (
         <p> I live a student in </p>
         )}
@@ -54,16 +82,10 @@ function App() {
         <p> I eat a student in </p>
         )}        
         
-
-
         <div class="footer_container">
-          <div class="footer">
-            <div class="footer_heading foot_1">
               <h1>Contact Me</h1>
               <a href="tel:+14374320893">Phone: +1 (437)432-0893</a>
               <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
-            </div>
-         </div>
         </div>
        </main>
     </div>
