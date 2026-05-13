@@ -40,7 +40,7 @@ function App() {
           className='collapsible'>Technical skills</button>        
 
         {tab =="projects" && (
-        <div className="box"> 
+        <div className="p_box"> 
           <h3>Website: </h3> Generated this website to display
           my details. 
           <h3>Hacksters: </h3> Acted as a front-end developer 
@@ -50,7 +50,7 @@ function App() {
         )}
 
         {tab =="skills" && (
-        <div className="box"> 
+        <div className="s_box"> 
           <table>
             <thead>
               <tr>
@@ -71,13 +71,13 @@ function App() {
         )}
 
         {tab =="work" && (
-        <div className="box"> 
+        <div className="w_box"> 
           <h3> Assisstant Crew Leader</h3>
         </div>
         )}
 
         {tab =="leadership" && (
-        <div className="box"> 
+        <div className="l_box"> 
           <h3> ESS Funding Coordinator </h3>
           <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
           <h3> Computer Engineering Senior External Executive </h3>

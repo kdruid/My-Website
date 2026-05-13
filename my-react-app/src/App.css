@@ -33,41 +33,70 @@ html, body, #root {
   100% { background-position: 0% 50%;}
 }
 
-.box{
+.p_box{
   text-align: center;
   width: 90%;
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   max-height: auto;
-/*
-  opacity: 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: rgba(255, 255, 255, 0.05);
+}
 
-  overflow: hidden;
+.w_box{
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+  max-height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: rgba(255, 255, 255, 0.05);
+}
 
-  transform: translateY(-10px);
+.s_box{
+  text-align: center;
+  width: auto;
+  max-width: 1000px;
+  margin: auto;
+  box-sizing: border-box;
+  max-height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: rgba(255, 255, 255, 0.05);
+}
 
-  transition:
-    max-height 0.5s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease,
-    padding 0.4s ease;
-
-  padding: 0 20px;*/
+.l_box{
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+  max-height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .box.active {
   max-height: 1000px;
-
   opacity: 100;
-
   transform: translateY(0);
-
   padding: 20px;
 }
 
 .collapsible{
+  font-size: medium;
   flex-direction: row;
   padding: 5px;
   margin: 5px;
@@ -99,7 +128,7 @@ html, body, #root {
 }
 
 .footer_container a:hover{
-  color: #000;
+  color: #6f5252;
 }
 
 .home_link{
@@ -120,8 +149,6 @@ html, body, #root {
 
 table {
   margin: 20px auto;
-
   border-spacing: 40px 10px;
-
   text-align: center;
 }
