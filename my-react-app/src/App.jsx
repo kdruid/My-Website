@@ -1,5 +1,6 @@
 import "./App.css"
 import { useState } from 'react'
+import botImage from '../images/bun.png'
 
 function App() {
   const [tab, setTab] = useState(null) 
@@ -24,9 +25,9 @@ function App() {
           <br />
           Select which route to take
         </p>
-        
+
         <button onClick={() =>
-          setTab(tab === "projects" ? null : "projects")}  
+          setTab(tab === "projects" ? null : "projects")}
           className='collapsible'>Projects</button>         
         <button onClick={() => 
           setTab(tab === "work" ? null : "work")}  
@@ -39,17 +40,17 @@ function App() {
           className='collapsible'>Technical skills</button>        
 
         {tab =="projects" && (
-        <p> 
-          <h3>Website: </h3> generated this website to display
+        <p className="box"> 
+          <h3>Website: </h3> Generated this website to display
           my details. 
-          <h3>Hacksters: </h3> acted as a front-end developer 
-          for an interview bot my team and I created for HackED 2026
-          <img src="" alt="image of our bot" />
+          <h3>Hacksters: </h3> Acted as a front-end developer 
+          for an interview bot my team and I created for HackED 2026. <br />
+          <img src={botImage} alt="image of our bot" />
         </p>
         )}
 
         {tab =="skills" && (
-        <p> 
+        <p className="box"> 
           <table>
             <thead>
               <tr>
@@ -70,22 +71,22 @@ function App() {
         )}
 
         {tab =="work" && (
-        <p> 
+        <p className="box"> 
           <h3> Assisstant Crew Leader</h3>
         </p>
         )}
 
         {tab =="leadership" && (
-        <p> 
+        <p className="box"> 
           <h3> ESS Funding Coordinator </h3>
           <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
           <h3> Computer Engineering Senior External Executive </h3>
         </p>
         )}        
         
-        <div class="footer_container">
+        <div className="footer_container">
               <h1>Contact Me</h1>
-              <a href="tel:+14374320893">Phone: +1 (437)432-0893</a>
+              <a href="tel:+14374320893">Phone: +1 (437)432-0893</a><br />
               <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
         </div>
        </main>

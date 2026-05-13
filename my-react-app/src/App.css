@@ -1,31 +1,35 @@
 :root{
   --gradient: linear-gradient(
     135deg,
-    #6d93ff,
-    #3f5fbe,
-    #202656,
-    #6d93ff
+    #3b82f6, 
+    #0a0f1e, 
+    #ffffff, 
+    #3b82f8
   )
 }
 
 .App{
+  text-decoration: bold;
+  color: #000;
   min-height: 100vh;
   background-size: 500% 500%;
   background-image: var(--gradient);
-  animation: gradientShift 5s ease infinite;
+  animation: gradientShift 20s ease infinite;
 }
 
 @keyframes gradientShift {
   0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  25%  { background-position: 50% 50%; }
+  50%  { background-position: 100% 50%;}
+  75%  { background-position: 50% 50%; }
+  100% { background-position: 0% 50%;}
 }
 
 .home_link{
   list-style: none;
   padding: 0%;
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .collapsible{
@@ -36,9 +40,28 @@
   border: none;
   color: black;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .collapsible:hover{
   background-color: aquamarine;
+  color: rgb(97, 173, 239);
+}
+
+.footer_container h1{
+  text-align: left;
+  color: hsl(0, 37%, 76%);
+}
+
+.footer_container a{
+  text-align: left;
+  transition: 0.4s;
+}
+
+.footer_container a:hover{
+  color: #000;
+}
+
+.box{
+  border-radius: auto;
 }
