@@ -40,17 +40,17 @@ function App() {
           className='collapsible'>Technical skills</button>        
 
         {tab =="projects" && (
-        <p className="box"> 
+        <div className="box"> 
           <h3>Website: </h3> Generated this website to display
           my details. 
           <h3>Hacksters: </h3> Acted as a front-end developer 
           for an interview bot my team and I created for HackED 2026. <br />
-          <img src={botImage} alt="image of our bot" />
-        </p>
+          <img src={botImage} alt="image of our bot" className="images"/>
+        </div>
         )}
 
         {tab =="skills" && (
-        <p className="box"> 
+        <div className="box"> 
           <table>
             <thead>
               <tr>
@@ -67,27 +67,28 @@ function App() {
               ))}
             </tbody>
           </table>
-        </p>
+        </div>
         )}
 
         {tab =="work" && (
-        <p className="box"> 
+        <div className="box"> 
           <h3> Assisstant Crew Leader</h3>
-        </p>
+        </div>
         )}
 
         {tab =="leadership" && (
-        <p className="box"> 
+        <div className="box"> 
           <h3> ESS Funding Coordinator </h3>
           <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
           <h3> Computer Engineering Senior External Executive </h3>
-        </p>
+        </div>
         )}        
         
-        <div className="footer_container">
-              <h1>Contact Me</h1>
-              <a href="tel:+14374320893">Phone: +1 (437)432-0893</a><br />
-              <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
+        <div className="footer">
+          <div className="footer_container">
+                <h1>Contact Me</h1>
+                <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
+          </div>
         </div>
        </main>
     </div>

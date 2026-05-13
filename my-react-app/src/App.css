@@ -25,11 +25,13 @@
   100% { background-position: 0% 50%;}
 }
 
-.home_link{
-  list-style: none;
-  padding: 0%;
-  margin: 0;
-  text-align: left;
+.box{
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .collapsible{
@@ -55,6 +57,11 @@
 
 .footer_container a{
   text-align: left;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
   transition: 0.4s;
 }
 
@@ -62,6 +69,18 @@
   color: #000;
 }
 
-.box{
-  border-radius: auto;
+.home_link{
+  list-style: none;
+  padding: 0%;
+  margin: 0;
+  text-align: left;
+}
+
+.images{
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
 }
