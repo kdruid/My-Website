@@ -18,13 +18,14 @@ function App() {
       </header>
       <h1>Welcome!!</h1>
        <main>
-        <p>
+        <div className="content">
           My name is Karo.
-          I am a Third year Computer Engineering student within the University of Alberta. 
-          I am interested in web development, automation, and game development.
+          I am a Third year Computer Engineering student studying at the University of Alberta. 
+          I have been acutely interested in web development, software development, system and 
+          hardware automation, and game development.
           <br />
           Select which route to take
-        </p>
+        </div>
 
         <button onClick={() =>
           setTab(tab === "projects" ? null : "projects")}
@@ -83,6 +84,11 @@ function App() {
           <h3> Computer Engineering Senior External Executive </h3>
         </div>
         )}        
+
+        <div className="content">
+          Outside of these I 
+          <br />
+        </div>
         
         <div className="footer">
           <div className="footer_container">
