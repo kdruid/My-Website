@@ -1,6 +1,7 @@
 import "./App.css"
 import { useState } from 'react'
 import botImage from '../images/bun.png'
+import myImage from '../images/portfolioE.jpeg'
 
 function App() {
   const [tab, setTab] = useState(null) 
@@ -16,15 +17,16 @@ function App() {
       <header>
         <a href="/" className="home_link">Divine's vyne</a>
       </header>
-      <h1>Welcome!!</h1>
+      <h2>Salutations and Welcome</h2>
        <main>
         <div className="content">
-          My name is Karo.
+          <h3>My name is Karo. <br /></h3>
+        </div>
+        <div className="content">
           I am a Third year Computer Engineering student studying at the University of Alberta. 
           I have been acutely interested in web development, software development, system and 
           hardware automation, and game development.
           <br />
-          Select which route to take
         </div>
 
         <button onClick={() =>
@@ -86,9 +88,16 @@ function App() {
         )}        
 
         <div className="content">
-          Outside of these I 
+          Outside of these I have a variety of hobbies such as 
+          <li>
+            <ul>Playing volleyball.</ul>
+            <ul>Making websites.</ul>
+            <ul>Working out.</ul>
+            <ul>Meeting new individuals.</ul>
+          </li>
           <br />
         </div>
+        <img src={myImage} alt="image of me" />
         
         <div className="footer">
           <div className="footer_container">
