@@ -14,29 +14,34 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <a href="/" className="home_link">Divine's vyne</a>
-      </header>
-      <h2>Salutations and Welcome</h2>
+      <h1>Salutations and Welcome</h1>
        <main>
-        <div className="content">
-          <h3>My name is Karo. <br /></h3>
-        </div>
-        <div className="content">
-          I am a Third year Computer Engineering student studying at the University of Alberta. 
-          I have been acutely interested in web development, software development, system and 
-          hardware automation, and game development.
-          <br />
-          Outside of these I have a variety of hobbies such as 
-          <li>
-            <ul>Playing volleyball.</ul>
-            <ul>Making websites.</ul>
-            <ul>Working out.</ul>
-            <ul>Meeting new individuals.</ul>
-          </li>
-          <br />
-        </div>
-        <img src={myImage} alt="image of me" /> <br />
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <div className="content">
+                  <h3>My name is Karo. <br /></h3>
+                  I am a Third year Computer Engineering student studying at the University of Alberta. 
+                  I have been acutely interested in web development, software development, system and 
+                  hardware automation, and game development.
+                  <br />
+                  Outside of these I have a variety of hobbies such as 
+                  <li>
+                    <ul>Playing volleyball.</ul>
+                    <ul>Making websites.</ul>
+                    <ul>Working out.</ul>
+                    <ul>Meeting new individuals.</ul>
+                  </li>
+                  <br />
+                </div>
+              </th>
+              <th> <img src={myImage} alt="image of me" /> <br /> </th>
+            </tr>
+          </thead>
+
+        </table>
+
 
         <button onClick={() =>
           setTab(tab === "projects" ? null : "projects")}
