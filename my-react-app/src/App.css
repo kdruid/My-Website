@@ -23,6 +23,12 @@ html, body, #root {
   100% { background-position: 0% 50%;}
 }
 
+@media (max-width:768px) {
+  .content{
+    flex-direction: column;
+  }
+}
+
 .App{
   font-size: large;
   text-decoration: bold;
@@ -124,6 +130,8 @@ html, body, #root {
   justify-content: space-between;
   align-items: center;
 }
+
+.content::
 
 .content h3{
   font-size: clamp(16px, 5vw, 48px)
