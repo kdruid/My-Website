@@ -131,8 +131,6 @@ html, body, #root {
   align-items: center;
 }
 
-.content::
-
 .content h3{
   font-size: clamp(16px, 5vw, 48px)
 }
