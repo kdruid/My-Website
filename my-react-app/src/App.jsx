@@ -27,7 +27,16 @@ function App() {
           I have been acutely interested in web development, software development, system and 
           hardware automation, and game development.
           <br />
+          Outside of these I have a variety of hobbies such as 
+          <li>
+            <ul>Playing volleyball.</ul>
+            <ul>Making websites.</ul>
+            <ul>Working out.</ul>
+            <ul>Meeting new individuals.</ul>
+          </li>
+          <br />
         </div>
+        <img src={myImage} alt="image of me" /> <br />
 
         <button onClick={() =>
           setTab(tab === "projects" ? null : "projects")}
@@ -40,7 +49,7 @@ function App() {
           className='collapsible'>Leadership</button>
         <button onClick={() => 
           setTab(tab === "skills" ? null : "skills")}  
-          className='collapsible'>Technical skills</button>        
+          className='collapsible'>Technical skills</button> <br />   
 
         {tab =="projects" && (
         <div className="p_box"> 
@@ -87,17 +96,6 @@ function App() {
         </div>
         )}        
 
-        <div className="content">
-          Outside of these I have a variety of hobbies such as 
-          <li>
-            <ul>Playing volleyball.</ul>
-            <ul>Making websites.</ul>
-            <ul>Working out.</ul>
-            <ul>Meeting new individuals.</ul>
-          </li>
-          <br />
-        </div>
-        <img src={myImage} alt="image of me" />
         
         <div className="footer">
           <div className="footer_container">

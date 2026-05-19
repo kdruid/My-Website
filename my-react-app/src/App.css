@@ -34,7 +34,6 @@ html, body, #root {
 }
 
 .App img{
-  max-height: 50px;
   justify-content: right;
 }
 
@@ -100,8 +99,8 @@ html, body, #root {
   padding: 20px;
 }
 
-.content h3{
-  border-block: black;
+.content{
+  border: black;
 }
 
 
@@ -139,10 +138,6 @@ html, body, #root {
 
 .footer_container a:hover{
   color: #6f5252;
-}
-
-.h2{
-  color: #000;
 }
 
 .home_link{
