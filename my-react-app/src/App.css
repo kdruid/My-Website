@@ -1,7 +1,6 @@
 html, body, #root {
   width: 100%;
   min-height: 100vh;
-
   margin: 0;
   padding: 0;
 }
@@ -9,8 +8,8 @@ html, body, #root {
 :root{
   --gradient: linear-gradient(
     135deg,
-    #3b82f6, 
-    #0a0f1e, 
+    #ffffff, 
+    grey,
     #ffffff, 
     #3b82f8
   )
@@ -25,17 +24,13 @@ html, body, #root {
 }
 
 .App{
+  font-size: large;
   text-decoration: bold;
   color: #000;
   min-height: 100vh;
   background-size: 500% 500%;
   background-image: var(--gradient);
   animation: gradientShift 20s ease infinite;
-}
-
-.App img{
-  max-width: 100%;
-  justify-content: right;
 }
 
 .p_box{
@@ -50,6 +45,11 @@ html, body, #root {
   border-radius: 10px;
   border-color: grey;
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.p_box img{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .w_box{
@@ -100,11 +100,6 @@ html, body, #root {
   padding: 20px;
 }
 
-.content{
-  border-block: black;
-}
-
-
 .collapsible{
   font-size: medium;
   flex-direction: row;
@@ -122,9 +117,21 @@ html, body, #root {
   color: rgb(97, 173, 239);
 }
 
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .content h3{
-  color: var(--gradient);
-  animation: gradientShift 10s ease infinite;
+  font-size: clamp(16px, 5vw, 48px)
+}
+
+.content img{
+  border-radius: 10000px;
+  padding: 50px;
+  max-width: 800px;
+  max-height: 800px;
 }
 
 .footer_container h1{
@@ -159,4 +166,8 @@ table {
   margin: 20px auto;
   border-spacing: 40px 10px;
   text-align: center;
+}
+
+ul{
+  text-align: left;
 }

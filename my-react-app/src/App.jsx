@@ -16,31 +16,24 @@ function App() {
     <div className="App">
       <h1>Salutations and Welcome</h1>
        <main>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <div className="content">
-                  <h3>My name is Karo. <br /></h3>
-                  I am a Third year Computer Engineering student studying at the University of Alberta. 
-                  I have been acutely interested in web development, software development, system and 
-                  hardware automation, and game development.
-                  <br />
-                  Outside of these I have a variety of hobbies such as 
-                  <li>
-                    <ul>Playing volleyball.</ul>
-                    <ul>Making websites.</ul>
-                    <ul>Working out.</ul>
-                    <ul>Meeting new individuals.</ul>
-                  </li>
-                  <br />
-                </div>
-              </th>
-              <th> <img src={myImage} alt="image of me" /> <br /> </th>
-            </tr>
-          </thead>
+        <div className="content">
+          <span>
+            <h3>My name is Karo. <br /></h3>
+            I am a Third year Computer Engineering student studying at the University of Alberta. 
+            I have been acutely interested in web development, software development, system and 
+            hardware automation, and game development.
+            <br />
+            Outside of these I have a variety of hobbies such as 
+            <ul>
+              <li>Playing volleyball.</li>
+              <li>Making websites.</li>
+              <li>Working out.</li>
+              <li>Meeting new individuals.</li>
+            </ul>
+          </span>
+        <img src={myImage} alt="image of me" /> <br />
+        </div>
 
-        </table>
 
 
         <button onClick={() =>
@@ -100,15 +93,15 @@ function App() {
           <h3> Computer Engineering Senior External Executive </h3>
         </div>
         )}        
+      </main>
 
-        
-        <div className="footer">
-          <div className="footer_container">
-                <h1>Contact Me</h1>
-                <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
-          </div>
+
+      <footer>
+        <div className="footer_container">
+          <h1>Contact Me</h1>
+          <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
         </div>
-       </main>
+      </footer>
     </div>
   );
 }
