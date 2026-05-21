@@ -20,8 +20,13 @@ function App() {
           <span>
             <h3>My name is Karo. <br /></h3>
             I am a Third year Computer Engineering student studying at the University of Alberta. 
-            I have been acutely interested in web development, software development, system and 
-            hardware automation, and game development.
+            I have interests in: 
+            <ul>
+              <li>Web development</li>
+              <li>Software development</li>
+              <li>System and hardware automation</li>
+              <li>Game development</li>
+            </ul>
             <br />
             Outside of these I have a variety of hobbies such as 
             <ul>
@@ -51,11 +56,24 @@ function App() {
 
         {tab =="projects" && (
         <div className="p_box"> 
-          <h3>Website: </h3> Generated this website to display
-          my details. 
-          <h3>Hacksters: </h3> Acted as a front-end developer 
-          for an interview bot my team and I created for HackED 2026. <br />
+          <h3>Website developer: </h3> 
+          <ul>
+            <li>Generated this website.</li>
+          </ul>
+          <h3>Hacksters: </h3> 
+          <ul>
+            <li>Acted as a front-end developer working mainly with CSS.</li>
+            <li>Worked on the webpage flow to allow the user a simple interface to work with</li>
+            <li> Created an interview bot that utilized MediaPipe to check engagement via posture and eye tracking.</li>
+          </ul>
           <img src={botImage} alt="image of our bot" className="images"/>
+
+          <h3>Video game creation</h3>
+          <ul>
+            <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
+            <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
+          </ul>
+          {/*<img src={gameImage} alt="idk" className="images"/>*/}
         </div>
         )}
 
@@ -83,6 +101,11 @@ function App() {
         {tab =="work" && (
         <div className="w_box"> 
           <h3> Assisstant Crew Leader</h3>
+            <ul>
+              <li>Managed and prioritized tasks across multiple job sites with high attention to detail and quality standards.</li>
+              <li>Demonstrated strong problem-solving skills in changing environments. </li>
+              <li>Worked effectively in a team to complete projects on schedule. </li>
+            </ul>
         </div>
         )}
 
