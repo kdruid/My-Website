@@ -23,7 +23,11 @@ function Slide() {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     return(
-        <img src={images[currentIndex]} alt="image of video game" />
+      <div>
+      <img src={images[currentIndex]} alt="image of video game" />
+      <button className="swap"> Next </button>
+      <button className="swap"> Previous </button>
+      </div>
     )
 
 }
