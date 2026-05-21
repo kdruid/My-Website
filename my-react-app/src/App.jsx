@@ -3,6 +3,31 @@ import { useState } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
 
+function Slide() {
+    const images= [
+        '../images/Screenshot 2026-05-20 222616.png',
+        '../images/Screenshot 2026-05-20 223805.png',
+        '../images/Screenshot 2026-05-20 223821.png',
+        '../images/Screenshot 2026-05-20 223836.png',
+        '../images/Screenshot 2026-05-20 223851.png',
+        '../images/Screenshot 2026-05-20 223903.png',
+        '../images/Screenshot 2026-05-20 223917.png',
+        '../images/Screenshot 2026-05-20 223953.png',
+        '../images/Screenshot 2026-05-20 224132.png',
+        '../images/Screenshot 2026-05-20 224148.png',
+        '../images/Screenshot 2026-05-20 224303.png',
+        '../images/Screenshot 2026-05-20 224348.png',
+        '../images/Screenshot 2026-05-20 224402.png',
+        '../images/Screenshot 2026-05-20 224417.png'
+    ]
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    return(
+        <img src={images[currentIndex]} alt="image of video game" />
+    )
+
+}
+
 function App() {
   const [tab, setTab] = useState(null) 
   const skills = [ 
@@ -73,7 +98,7 @@ function App() {
             <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
             <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
           </ul>
-          {/*<img src={gameImage} alt="idk" className="images"/>*/}
+          <Slide />
         </div>
         )}
 
