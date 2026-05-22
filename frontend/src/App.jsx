@@ -37,10 +37,15 @@ function GameSlide() {
 
 function App() {
   const [tab, setTab] = useState(null) 
+  const Dot = () => <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#333', margin: '2px 0', top:"20px", right:"20px"   }} />;
 
   return (
     <div className="App">
-      <h1>Salutations and Welcome</h1>
+      <header>
+        <button >
+          <Dot /><Dot /><Dot />
+        </button>
+      </header>
        <main>
         <div className="content">
           <span>
