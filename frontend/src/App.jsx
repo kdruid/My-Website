@@ -3,7 +3,7 @@ import { useState } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
 
-function Slide() {
+function GameSlide() {
     const images= [
         '/Screenshot 2026-05-20 222616.png',
         '/Screenshot 2026-05-20 223805.png',
@@ -23,8 +23,8 @@ function Slide() {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     return(
-      <div>
-        <img src={images[currentIndex]} alt="image of video game" />
+      <div >
+        <img className="images" src={images[currentIndex]} alt="image of video game" /> <br />
         <button  
           onClick={() => currentIndex == images.length-1? setCurrentIndex(0) : setCurrentIndex(currentIndex+1)}
         className="swap" id="next"> Next </button>
@@ -98,8 +98,8 @@ function App() {
           <ul>
             <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
             <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
-          <Slide />
           </ul>
+          <GameSlide />
         </div>
         )}
 
