@@ -75,16 +75,16 @@ html, body, #root {
 
 .s_box{
   text-align: center;
-  width: auto;
+  width: 90%;
   max-width: 1000px;
+  margin: auto;
+  padding: auto;
   box-sizing: border-box;
   max-height: auto;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 10px;
-  border-color: grey;
-  background-color: rgba(255, 255, 255, 0.05);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .l_box{
@@ -95,10 +95,8 @@ html, body, #root {
   padding: auto;
   box-sizing: border-box;
   max-height: auto;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 10px;
-  border-color: grey;
-  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .box.active {
