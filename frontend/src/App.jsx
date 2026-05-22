@@ -3,22 +3,22 @@ import { useState } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
 
-/*function Slide() {
+function Slide() {
     const images= [
-        '../images/Screenshot 2026-05-20 222616.png',
-        '../images/Screenshot 2026-05-20 223805.png',
-        '../images/Screenshot 2026-05-20 223821.png',
-        '../images/Screenshot 2026-05-20 223836.png',
-        '../images/Screenshot 2026-05-20 223851.png',
-        '../images/Screenshot 2026-05-20 223903.png',
-        '../images/Screenshot 2026-05-20 223917.png',
-        '../images/Screenshot 2026-05-20 223953.png',
-        '../images/Screenshot 2026-05-20 224132.png',
-        '../images/Screenshot 2026-05-20 224148.png',
-        '../images/Screenshot 2026-05-20 224303.png',
-        '../images/Screenshot 2026-05-20 224348.png',
-        '../images/Screenshot 2026-05-20 224402.png',
-        '../images/Screenshot 2026-05-20 224417.png'
+        '/Screenshot 2026-05-20 222616.png',
+        '/Screenshot 2026-05-20 223805.png',
+        '/Screenshot 2026-05-20 223821.png',
+        '/Screenshot 2026-05-20 223836.png',
+        '/Screenshot 2026-05-20 223851.png',
+        '/Screenshot 2026-05-20 223903.png',
+        '/Screenshot 2026-05-20 223917.png',
+        '/Screenshot 2026-05-20 223953.png',
+        '/Screenshot 2026-05-20 224132.png',
+        '/Screenshot 2026-05-20 224148.png',
+        '/Screenshot 2026-05-20 224303.png',
+        '/Screenshot 2026-05-20 224348.png',
+        '/Screenshot 2026-05-20 224402.png',
+        '/Screenshot 2026-05-20 224417.png'
     ]
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -26,17 +26,14 @@ import myImage from '../images/portfolioE.jpeg'
       <div>
         <img src={images[currentIndex]} alt="image of video game" />
         <button  
-          onClick={() => currentIndex == 13? currentIndex == 0 : currentIndex++}
+          onClick={() => currentIndex == images.length-1? setCurrentIndex(0) : setCurrentIndex(currentIndex+1)}
         className="swap" id="next"> Next </button>
         <button 
-        onClick={() => currentIndex == 0 ? disable : currentIndex--}
+        onClick={() => currentIndex == 0? setCurrentIndex(images.length-1) : setCurrentIndex(currentIndex-1)}
         className="swap" id="prev"> Previous </button>
-        {True (
-          <img src={images[currentIndex]} alt="" />
-        )}
       </div>
     )
-}*/
+}
 
 function App() {
   const [tab, setTab] = useState(null) 
@@ -101,6 +98,7 @@ function App() {
           <ul>
             <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
             <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
+          <Slide />
           </ul>
         </div>
         )}
