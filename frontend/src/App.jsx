@@ -3,7 +3,7 @@ import { useState } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
 
-function Slide() {
+/*function Slide() {
     const images= [
         '../images/Screenshot 2026-05-20 222616.png',
         '../images/Screenshot 2026-05-20 223805.png',
@@ -24,22 +24,22 @@ function Slide() {
 
     return(
       <div>
-      <img src={images[currentIndex]} alt="image of video game" />
-      <button className="swap"> Next </button>
-      <button className="swap"> Previous </button>
+        <img src={images[currentIndex]} alt="image of video game" />
+        <button  
+          onClick={() => currentIndex == 13? currentIndex == 0 : currentIndex++}
+        className="swap" id="next"> Next </button>
+        <button 
+        onClick={() => currentIndex == 0 ? disable : currentIndex--}
+        className="swap" id="prev"> Previous </button>
+        {True (
+          <img src={images[currentIndex]} alt="" />
+        )}
       </div>
     )
-
-}
+}*/
 
 function App() {
   const [tab, setTab] = useState(null) 
-  const skills = [ 
-    {softSkills: "Leadership", hardSkills: "Python"},
-    {softSkills: "Communication", hardSkills: "CSS"},
-    {softSkills: "Human relations", hardSkills: "Microsoft tools"},
-    {softSkills: "problem solving", hardSkills: "HTML"}
-  ];
 
   return (
     <div className="App">
@@ -102,33 +102,41 @@ function App() {
             <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
             <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
           </ul>
-          <Slide />
         </div>
         )}
 
         {tab =="skills" && (
         <div className="s_box"> 
-          <table>
-            <thead>
-              <tr>
-                <th> Soft skills </th>
-                <th> Hard skills </th>
-              </tr>
-            </thead>
-            <tbody>
-              {skills.map((skill, index) => (
-                <tr key={index}>
-                  <td>{skill.softSkills}</td>
-                  <td>{skill.hardSkills}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="s_col">
+            Soft skills
+            <ul>
+              <li>Leadership</li>
+              <li>Communication</li>
+              <li>Human relations</li>
+              <li>Problem solving</li>
+            </ul>
+          </div>
+
+          <div className="s_col">
+            Hard skills
+            <ul>
+              <li>Python</li>
+              <li>CSS</li>
+              <li>Microsoft tools</li>
+              <li>HTML</li>
+            </ul>
+          </div>
         </div>
         )}
 
         {tab =="work" && (
         <div className="w_box"> 
+          <h3> Web developer and designer</h3>
+            <ul>
+              <li>Working as a freelance website developer.</li>
+              <li>Creating personal portfolios</li>
+              <li className="itals"> Hoping to expand to creating small business webapps. </li>
+            </ul>
           <h3> Assisstant Crew Leader</h3>
             <ul>
               <li>Managed and prioritized tasks across multiple job sites with high attention to detail and quality standards.</li>
@@ -140,9 +148,23 @@ function App() {
 
         {tab =="leadership" && (
         <div className="l_box"> 
-          <h3> ESS Funding Coordinator </h3>
-          <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
           <h3> Computer Engineering Senior External Executive </h3>
+            <ul>
+              <li>Acting as the face of the club to companies and other groups</li>
+              <li>Planning Aether 2026 for the club. </li>
+              <li>Aided in the club movie production, and other events like HackED and HackED BETA </li>
+            </ul>          
+          <h3> Electrical Engineering Junior Executive of Clubroom and Events Coordination</h3>
+            <ul>
+              <li> Managed sales in the clubroom.</li>
+              <li> Ensured that merch and goods were accounted for. </li>
+            </ul>
+          <h3> ESS Funding Coordinator </h3>
+            <ul>
+              <li>Managed spreadsheets and prices for the club.</li>
+              <li>Contributed in meetings and took minutes </li>
+            </ul>
+
         </div>
         )}        
       </main>
