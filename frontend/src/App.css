@@ -29,6 +29,62 @@ html, body, #root {
     flex-direction: column;
   }
 }
+/* the dropdown menu bar*/
+#dropDown {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0,0,0,0.2);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto; /* pushes it to the right */
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+}
+.overlay {
+  position: fixed;
+  width: 97vw;
+  height: 100vh;
+  z-index: 98;        /* below dropdown, above everything else */
+}
+.dropdown-menu {
+  position: fixed;
+  top: 55px;
+  right: 10px;
+  z-index: 99;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 6px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.15); /* add this */
+  backdrop-filter: blur(8px);               /* add this */
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*end of dropdown menu*/
 
 .App{
   font-size: large;
@@ -107,14 +163,12 @@ html, body, #root {
 }
 
 .collapsible{
-  font-size: medium;
-  flex-direction: row;
-  padding: 5px;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 4px;
-  border: none;
-  color: rgb(255, 255, 255);
   cursor: pointer;
+  margin-left: auto;
   transition: 0.4s;
 }
 
@@ -131,7 +185,6 @@ html, body, #root {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255,255,255,0.25);
-
   text-align: left;
   box-sizing: border-box;
   border-radius: 10px;
@@ -150,9 +203,10 @@ html, body, #root {
   width: 100%;
 }
 
+
 .footer_container h1{
   text-align: left;
-  color: hsl(0, 37%, 76%);
+  color: hsl(0, 0%, 0%);
 }
 
 .footer_container a{
@@ -167,6 +221,12 @@ html, body, #root {
 
 .footer_container a:hover{
   color: #6f5252;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .images{
@@ -205,4 +265,3 @@ ul{
 }
 
 
-/* the dot menu bar*/

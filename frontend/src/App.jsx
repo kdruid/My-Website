@@ -1,5 +1,5 @@
 import "./App.css"
-import { useState } from 'react'
+import { useState, useContext, useRef } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
 
@@ -13,7 +13,6 @@ function GameSlide() {
         '/Screenshot 2026-05-20 223903.png',
         '/Screenshot 2026-05-20 223917.png',
         '/Screenshot 2026-05-20 223953.png',
-        '/Screenshot 2026-05-20 224132.png',
         '/Screenshot 2026-05-20 224148.png',
         '/Screenshot 2026-05-20 224303.png',
         '/Screenshot 2026-05-20 224348.png',
@@ -36,18 +35,42 @@ function GameSlide() {
 }
 
 function App() {
-  const [tab, setTab] = useState(null) 
-  const Dot = () => <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#333', margin: '2px 0', top:"20px", right:"20px"   }} />;
+  const [tab, setTab] = useState(null);
+  const [open, setOpen] = useState(false)
+  const [display, setDisplay] = useState(false)
+  //const Dot = () => <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#333', margin: '2px 0', top:"20px", right:"20px"   }} />;
 
   return (
     <div className="App">
       <header>
-        <button >
-          <Dot /><Dot /><Dot />
-        </button>
-      </header>
-       <main>
-        <div className="content">
+        <button onClick={() => setOpen(!open)} id="dropDown">
+            <div className="hamburger-line" />
+            <div className="hamburger-line" />
+            <div className="hamburger-line" />
+       </button>
+
+        {open && <div className="overlay" onClick={() => setOpen(false)}>
+        <div className="dropdown_menu">
+            <button onClick={() =>
+            setTab(tab === "projects" ? null : "projects")}
+            className='collapsible'>Projects</button>         
+            <button onClick={() => 
+            setTab(tab === "work" ? null : "work")}  
+            className='collapsible'>Work Experiecnce</button>
+            <button onClick={() => 
+            setTab(tab === "leadership" ? null : "leadership")}  
+            className='collapsible'>Leadership</button>
+            <button onClick={() => 
+            setTab(tab === "skills" ? null : "skills")}  
+            className='collapsible'>Technical skills</button>
+          </div>
+        </div>
+       }
+    
+        </header>
+        <main>
+
+          <div className="content">
           <span>
             <h3>My name is Karo. <br /></h3>
             I am a Third year Computer Engineering student studying at the University of Alberta. 
@@ -70,20 +93,7 @@ function App() {
         <img src={myImage} alt="image of me" /> <br />
         </div>
 
-
-
-        <button onClick={() =>
-          setTab(tab === "projects" ? null : "projects")}
-          className='collapsible'>Projects</button>         
-        <button onClick={() => 
-          setTab(tab === "work" ? null : "work")}  
-          className='collapsible'>Work Experiecnce</button>
-        <button onClick={() => 
-          setTab(tab === "leadership" ? null : "leadership")}  
-          className='collapsible'>Leadership</button>
-        <button onClick={() => 
-          setTab(tab === "skills" ? null : "skills")}  
-          className='collapsible'>Technical skills</button> <br />   
+ 
 
         {tab =="projects" && (
         <div className="p_box"> 
