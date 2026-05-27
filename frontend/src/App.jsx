@@ -43,12 +43,14 @@ function App() {
   return (
     <div className="App">
       <header>
-        <button onClick={() => setOpen(!open)} id="dropDown">
-            <div className="hamburger-line" />
-            <div className="hamburger-line" />
-            <div className="hamburger-line" />
-       </button>
-
+        <div className="head_l">
+          <img src={myImage} alt="logo" className="logo"/>
+          <button onClick={() => setOpen(!open)} id="dropDown">
+              <div className="hamburger-line" />
+              <div className="hamburger-line" />
+              <div className="hamburger-line" />
+          </button>
+        </div>
         {open && <div className="overlay" onClick={() => setOpen(false)}>
         <div className="dropdown_menu">
             <button onClick={() =>
@@ -90,7 +92,7 @@ function App() {
               <li>Meeting new individuals.</li>
             </ul>
           </span>
-        <img src={myImage} alt="image of me" /> <br />
+        <img src="20250617_124210.jpg" alt="image of me" /> <br />
         </div>
 
  
