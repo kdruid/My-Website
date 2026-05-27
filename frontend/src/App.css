@@ -3,7 +3,7 @@ html, body, #root {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Times New Romans";
+  font-family: "Times New Romans", serif;
 }
 
 :root{
@@ -91,6 +91,7 @@ html, body, #root {
 /*end of dropdown menu*/
 
 .App{
+  font-family: 'Times New Roman', Times, serif;
   font-size: large;
   text-decoration: bold;
   color: #000;
@@ -232,6 +233,10 @@ html, body, #root {
   flex-direction: row;
 }
 
+.head_l h3{
+  text-align: center;
+}
+
 .images{
   max-width: 100%;
   height: auto;
@@ -246,6 +251,7 @@ html, body, #root {
   height: 50px;
   object-fit: cover;
   padding: 0;
+  margin-left: 40px;
 }
 
 .swap{
@@ -263,6 +269,10 @@ html, body, #root {
   background-color: aquamarine;
   color: rgb(97, 173, 239);
   transform: scale(1.25);
+}
+
+h2{
+  color: #000;
 }
 
 table {

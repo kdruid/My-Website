@@ -45,12 +45,14 @@ function App() {
       <header>
         <div className="head_l">
           <img src={myImage} alt="logo" className="logo"/>
+          <h3> Divine's Vyne</h3>
           <button onClick={() => setOpen(!open)} id="dropDown">
               <div className="hamburger-line" />
               <div className="hamburger-line" />
               <div className="hamburger-line" />
           </button>
         </div>
+
         {open && <div className="overlay" onClick={() => setOpen(false)}>
         <div className="dropdown_menu">
             <button onClick={() =>
@@ -74,7 +76,8 @@ function App() {
 
           <div className="content">
           <span>
-            <h3>My name is Karo. <br /></h3>
+            <h3>Welcome</h3>
+            <h2>My name is Karo. <br /></h2>
             I am a Third year Computer Engineering student studying at the University of Alberta. 
             I have interests in: 
             <ul>
@@ -95,13 +98,13 @@ function App() {
         <img src="20250617_124210.jpg" alt="image of me" /> <br />
         </div>
 
- 
-
         {tab =="projects" && (
         <div className="p_box"> 
           <h3>Website developer: </h3> 
           <ul>
-            <li>Generated this website.</li>
+            <li>Generated this portfolio.</li>
+            <li>Creating unique portfolios for others to strengthen my skillset</li>
+            <li>Learning Backend tools like Nodejs to become a Full-stack dev</li>
           </ul>
           <h3>Hacksters: </h3> 
           <ul>
@@ -114,7 +117,8 @@ function App() {
           <h3>Video game creation</h3>
           <ul>
             <li>Dedicated over 50 hours of learning, designing and creating this maze type game using Godot Engine. </li>
-            <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions, and some personal pixel art. </li> 
+            <li>Utilizes storyline, multiple free non-comprehensive assets, multiple transitions </li> 
+            <li>Created authentic pixel art using piskel. </li> 
           </ul>
           <GameSlide />
         </div>
@@ -123,22 +127,29 @@ function App() {
         {tab =="skills" && (
         <div className="s_box"> 
           <div className="s_col">
-            Soft skills
+            <h3>Soft skills</h3>
             <ul>
+              <li>Curiosity</li>
               <li>Leadership</li>
+              <li>Adaptability</li>
               <li>Communication</li>
               <li>Human relations</li>
               <li>Problem solving</li>
+              <li>Self learning</li>
             </ul>
           </div>
 
           <div className="s_col">
-            Hard skills
+            <h3>Hard skills</h3>
             <ul>
               <li>Python</li>
               <li>CSS</li>
               <li>Microsoft tools</li>
-              <li>HTML</li>
+              <li>Frontend</li>
+              <li>Git&itHub</li>
+              <li>C & C++</li>
+              <li>Godot</li>
+              <li>Debugging</li>
             </ul>
           </div>
         </div>
@@ -183,7 +194,6 @@ function App() {
         </div>
         )}        
       </main>
-
 
       <footer>
         <div className="footer_container">
