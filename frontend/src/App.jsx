@@ -90,7 +90,7 @@ function App() {
             Outside of these I have a variety of hobbies such as 
             <ul>
               <li>Playing volleyball.</li>
-              <li>Making websites.</li>
+              <li>Coding.</li>
               <li>Working out.</li>
               <li>Meeting new individuals.</li>
             </ul>

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#API keys
+portfoliocred-1bd0d2572d03.json
