@@ -11,12 +11,13 @@ function main() {
     
     return (
         <div>
-            <form action="action_page">Email</form>
             <img src="" alt="place_holder" />
             <div className='intro'>
                 Welcome to Divne's Vyne
                 In order to view this page please login.
             </div>
+            <label htmlFor="">Name</label>
+            <label htmlFor="">Email</label>
             
         </div>
     )
