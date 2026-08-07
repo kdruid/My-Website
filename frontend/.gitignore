@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 #API keys
-portfoliocred-1bd0d2572d03.json
+credentials/
 
 #envs
 .env*
