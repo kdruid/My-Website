@@ -1,5 +1,24 @@
-
+require('dotenv').config();
 const express = require('express');
+const { google } = require('googleapis');
+
+const auth = new google.auth.GoogleAuth({
+    keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
+async function appendToSheet(username, email) {
+    const sheets = google.sheets({ version: 'v4', auth });
+
+    await sheets.spreadsheets.values.append({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Sheet1!A:C',
+        valueInputOption: 'USER_ENTERED',
+        requestBody: {
+            values: [[username, email, new Date().toISOString()]],
+        },
+    });
+}
+
 const app = express();
 
 app.use(express.json());
@@ -7,13 +26,20 @@ app.get('/', (req, res) => {
     res.send('Hello from the backend!');
 });
 
-app.post('/api/login',(req,res) =>{
+app.post('/api/login', async (req,res) =>{
     const {username, email} = req.body;
+    
     if (!username || !email) {
         return res.status(400).json({ message: 'Lacking username or email.'});
     }   
-    console.log('Login attempt:', username, email);
-    res.json({ message: 'Login received successfully!'});
+    try{
+        await appendToSheet(username, email);
+        res.json({message: 'Login successful'})
+    }
+    catch{
+        console.error('Error writing to sheet:', err);
+        res.status(500).json({message: 'Login unsuccessful'});
+    }
 });
 
 app.listen(5000, ()=> {
