@@ -2,6 +2,8 @@ import "./App.css"
 import { useState, useContext, useRef } from 'react'
 import botImage from '../images/bun.png'
 import myImage from '../images/portfolioE.jpeg'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 
 function GameSlide() {
     const images= [
@@ -197,8 +199,15 @@ function App() {
 
       <footer>
         <div className="footer_container">
-          <h1>Contact Me</h1>
-          <a href="mailto:oghenekaroegbevurie@gmail.com">Email: oghenekaroegbevurie@gmail.com</a>
+          <div className="socials">
+            <a href="https://github.com/kdruid" target="_blank" rel="noopener noreferrer">
+              <FaGithub size={50} />
+            </a>
+            <a href="https://www.linkedin.com/in/oghenekaro-egbevurie-aa407824b/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={50}/>
+            </a>
+
+          </div>
         </div>
       </footer>
     </div>

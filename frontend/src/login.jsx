@@ -1,6 +1,7 @@
-//import "./login.css"
+import "./login.css"
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import myImage from '../images/portfolioE.jpeg'
 
 
 function Main() {
@@ -47,11 +48,15 @@ function Main() {
 
     return (
         <div className="login-page">
+            <img src={myImage} alt="logo" className="logo"/>
+            <p>
+                Welcome in order to view this page you need to fill out the following below
+            </p>
             <h1>Login</h1>
             <form onSubmit={handleLogin}>
                 <input
                     type="text"
-                    placeholder="Username or Company name"
+                    placeholder="Company name"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
