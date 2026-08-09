@@ -20,14 +20,15 @@ html, body, #root {
   --gradient: linear-gradient(
     135deg,
     var(--paper),
-    #EDEFF3,
-    var(--paper),
+    #99b6f1,
+    var(--accent),
     var(--accent-soft)
   );
 }
 
 @keyframes gradientShift {
   0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
@@ -85,12 +86,15 @@ html, body, #root {
 }
 
 .logo {
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  object-fit: cover;
+  width: auto;
+  height: 70px;
   margin-left: 24px;
-  border: 2px solid var(--line);
+  cursor: pointer;
+}
+
+.logo :hover{
+  transform: scale(1.06);
+  cursor: pointer;
 }
 
 #dropDown {
@@ -382,4 +386,6 @@ table {
 .socials :hover{
   color: var(--ink);
   transition: color 0.2s ease;
+  transform: scale(1.06) 0.5s;
+
 }

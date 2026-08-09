@@ -1,7 +1,8 @@
 import "./App.css"
 import { useState, useContext, useRef } from 'react'
+import { useNavigate } from "react-router-dom"
 import botImage from '../images/bun.png'
-import myImage from '../images/portfolioE.jpeg'
+import myImage from '/Dvyne.svg'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
@@ -37,6 +38,7 @@ function GameSlide() {
 }
 
 function App() {
+  const navigate = useNavigate()
   const [tab, setTab] = useState(null);
   const [open, setOpen] = useState(false)
   const [display, setDisplay] = useState(false)
@@ -46,8 +48,7 @@ function App() {
     <div className="App">
       <header>
         <div className="head_l">
-          <img src={myImage} alt="logo" className="logo"/>
-          <h3> Divine's Vyne</h3>
+          <img src={myImage} alt="logo" className="logo" onClick={() =>navigate('/landing')}/>
           <button onClick={() => setOpen(!open)} id="dropDown">
               <div className="hamburger-line" />
               <div className="hamburger-line" />
