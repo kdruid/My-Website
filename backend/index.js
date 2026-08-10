@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 5000;
 
 let authConfig;
 
-if (process.env.GOOGLE_CREDENTIALS_JSON) {
-    const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON);
+if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
     authConfig = {
         credentials: credentials,
         scopes: ['https://www.googleapis.com/auth/spreadsheets'],
