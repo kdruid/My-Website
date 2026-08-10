@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const { google } = require('googleapis');
 const cors = require('cors');
+const PORT = process.env.PORT || 5000;
 
 
 let authConfig;
@@ -54,12 +55,12 @@ app.post('/api/login', async (req,res) =>{
         await appendToSheet(username, email);
         res.json({message: 'Login successful'})
     }
-    catch{
+    catch (err){
         console.error('Error writing to sheet:', err);
         res.status(500).json({message: 'Login unsuccessful'});
     }
 });
 
-app.listen(5000, ()=> {
-    console.log('Server running on port 5000');
-})
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
