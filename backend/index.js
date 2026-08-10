@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const { google } = require('googleapis');
+const cors = require('cors');
+
 
 let authConfig;
 
@@ -35,6 +37,9 @@ async function appendToSheet(username, email) {
 const app = express();
 
 app.use(express.json());
+app.use(cors({
+    origin: 'https://my-website-kappa-cyan.vercel.app'
+}));
 app.get('/', (req, res) => {
     res.send('Hello from the backend!');
 });
