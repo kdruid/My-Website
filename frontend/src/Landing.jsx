@@ -49,6 +49,11 @@ function App() {
       <header>
         <div className="head_l">
           <img src={myImage} alt="logo" className="logo" onClick={() =>navigate('/landing')}/>
+          <a href="/Coop-resume.pdf" 
+          download="Oghenekaro-Egbevurie-resume.pdf"
+          className="resume-button">
+            My Resume.
+          </a>
           <button onClick={() => setOpen(!open)} id="dropDown">
               <div className="hamburger-line" />
               <div className="hamburger-line" />
@@ -207,7 +212,6 @@ function App() {
             <a href="https://www.linkedin.com/in/oghenekaro-egbevurie-aa407824b/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={50}/>
             </a>
-
           </div>
         </div>
       </footer>
