@@ -21,7 +21,19 @@
   margin-bottom: 8px;
   text-align: center;
 }
- 
+
+.login-page p{
+  color: var(--content);
+  font-family: var(--font-display);
+  font-size: clamp(20px, 4vw, 20px);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-page form {
   display: flex;
   flex-direction: column;
@@ -93,3 +105,10 @@
   animation: reveal 0.2s ease;
 }
  
+.picture{
+  border-radius: 50%;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 12px 32px rgba(20, 23, 28, 0.12);
+}

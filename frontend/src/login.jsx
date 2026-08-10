@@ -1,7 +1,8 @@
 import "./login.css"
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import myImage from '../images/portfolioE.jpeg'
+import myImage from '/Dvyne.svg'
+import pic from '/20250617_124210.jpg'
 
 
 function Main() {
@@ -39,7 +40,7 @@ function Main() {
             }
             const data = await response.json();
             console.log(data.message);
-            navigate('/landing');
+            navigate('/');
         }
         catch (err){
             setError('Something went wrong. Please try again.');
@@ -48,9 +49,11 @@ function Main() {
 
     return (
         <div className="login-page">
-            <img src={myImage} alt="logo" className="logo"/>
+            <img src={myImage} alt="logo" className="logo" onClick={() =>navigate('/')}/>
+            <img src={pic} alt="my_image" className="picture"/>
             <p>
-                Welcome in order to view this page you need to fill out the following below
+                Want me to follow up? Drop your name and company email below. <br />
+                This is competely optional, the resume's yours either way.
             </p>
             <h1>Login</h1>
             <form onSubmit={handleLogin}>
@@ -70,6 +73,11 @@ function Main() {
                 <button 
                     type="submit">
                         Login
+                </button>
+                <button 
+                    onClick={() => navigate('/')}
+                    type="submit">
+                        Return
                 </button>
             </form>
         </div>

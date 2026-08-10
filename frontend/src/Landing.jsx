@@ -48,10 +48,11 @@ function App() {
     <div className="App">
       <header>
         <div className="head_l">
-          <img src={myImage} alt="logo" className="logo" onClick={() =>navigate('/landing')}/>
+          <img src={myImage} alt="logo" className="logo" onClick={() =>navigate('/')}/>
           <a href="/Coop-resume.pdf" 
           download="Oghenekaro-Egbevurie-resume.pdf"
-          className="resume-button">
+          className="resume-button"
+          onClick={() => navigate('/login')}>
             My Resume.
           </a>
           <button onClick={() => setOpen(!open)} id="dropDown">
